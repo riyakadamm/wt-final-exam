@@ -1,0 +1,32 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q2-2</title>
+  </head>
+  <body>
+    <script>
+      function inAscOrder(array) {
+        let count = array.length;
+
+        for (let i = 0; i < array.length - 1; i++) {
+          if (array[i] < array[i + 1]) {
+            count--;
+          }
+        }
+
+        if (count == 1) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+      console.log(inAscOrder([1, 2, 4, 7, 19])); //RETURNS TRUE
+      console.log(inAscOrder([1, 2, 3, 4, 5])); //RETURNS TRUE
+      console.log(inAscOrder([1, 6, 10, 18, 2, 4, 20])); //RETURNS FALSE
+      console.log(inAscOrder([9, 8, 7, 6, 5, 4, 3, 2, 1])); //RETURN FALSE
+    </script>
+  </body>
+</html>
